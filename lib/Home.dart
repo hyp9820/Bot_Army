@@ -32,7 +32,13 @@ class _HomeState extends State<Home> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      Icon(Icons.menu),
+                      IconButton(
+                        icon: const Icon(Icons.menu),
+                        tooltip: 'Menu',
+                        onPressed: () {
+                          print("Menu");
+                        },
+                      ),
                       // FontAwesomeIcons.hamburger,
                       Container(
                         height: 59,
