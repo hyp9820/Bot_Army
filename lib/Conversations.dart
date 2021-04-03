@@ -10,7 +10,6 @@ TextEditingController _searchController = new TextEditingController();
 
 class _ConversationsState extends State<Conversations> {
   @override
-
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
@@ -25,51 +24,50 @@ class _ConversationsState extends State<Conversations> {
                     width: 40,
                     height: 40,
                     decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      image: DecorationImage(
-                        image: NetworkImage(
-                        "https://randomuser.me/api/portraits/men/11.jpg"),
-                          fit: BoxFit.cover)),
-                      ),
-                    Text(
-                      "Chats",
-                      style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),
-                    ),
-                    Icon(Icons.edit)
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                            image: NetworkImage(
+                                "https://randomuser.me/api/portraits/men/11.jpg"),
+                            fit: BoxFit.cover)),
+                  ),
+                  Text(
+                    "Chats",
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                  ),
+                  Icon(Icons.edit)
                 ],
               ),
               SizedBox(
-              height: 15,
-            ),
-              Container(
-              width: double.infinity,
-              height: 40,
-              decoration: BoxDecoration(
-                  color: Color(0xFFe9eaec),
-                  borderRadius: BorderRadius.circular(15)),
-              child: TextField(
-                cursorColor: Color(0xFF000000),
-                controller: _searchController,
-                decoration: InputDecoration(
-                    prefixIcon: Icon(
-                      Icons.search,
-                      color: Color(0xFF000000).withOpacity(0.5),
-                    ),
-                    hintText: "Search",
-                    border: InputBorder.none),
+                height: 15,
               ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            _conversations(context)
+              Container(
+                width: double.infinity,
+                height: 40,
+                decoration: BoxDecoration(
+                    color: Color(0xFFe9eaec),
+                    borderRadius: BorderRadius.circular(15)),
+                child: TextField(
+                  cursorColor: Color(0xFF000000),
+                  controller: _searchController,
+                  decoration: InputDecoration(
+                      prefixIcon: Icon(
+                        Icons.search,
+                        color: Color(0xFF000000).withOpacity(0.5),
+                      ),
+                      hintText: "Search",
+                      border: InputBorder.none),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              _conversations(context)
             ],
           ),
         ),
       ),
     );
   }
-
 
   _conversations(BuildContext context) {
     return Column(
@@ -84,27 +82,7 @@ class _ConversationsState extends State<Conversations> {
                   height: 60,
                   child: Stack(
                     children: <Widget>[
-                      conversationList[index]['hasStory'] ? 
                       Container(
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border:
-                                Border.all(color: Colors.blueAccent, width: 3)),
-                        child: Padding(
-                          padding: const EdgeInsets.all(3.0),
-                          child: Container(
-                            width: 75,
-                            height: 75,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                image: DecorationImage(
-                                    image: NetworkImage(
-                                        conversationList[index]['imageUrl']),
-                                    fit: BoxFit.cover)),
-                          ),
-                        ),
-                      )
-                      : Container(
                         width: 70,
                         height: 70,
                         decoration: BoxDecoration(
@@ -124,7 +102,8 @@ class _ConversationsState extends State<Conversations> {
                                 decoration: BoxDecoration(
                                     color: Color(0xFF66BB6A),
                                     shape: BoxShape.circle,
-                                    border: Border.all(color: Color(0xFFFFFFFF), width: 3)),
+                                    border: Border.all(
+                                        color: Color(0xFFFFFFFF), width: 3)),
                               ),
                             )
                           : Container()
@@ -152,7 +131,8 @@ class _ConversationsState extends State<Conversations> {
                             " - " +
                             conversationList[index]['time'],
                         style: TextStyle(
-                            fontSize: 15, color: Color(0xFF000000).withOpacity(0.7)),
+                            fontSize: 15,
+                            color: Color(0xFF000000).withOpacity(0.7)),
                         overflow: TextOverflow.ellipsis,
                       ),
                     )
@@ -165,9 +145,4 @@ class _ConversationsState extends State<Conversations> {
       }),
     );
   }
-
-
-
-
 }
-

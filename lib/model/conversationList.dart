@@ -29,7 +29,7 @@ List conversationList = [
   },
   {
     "name": "Robert",
-    "imageUrl": "https://randomuser.me/api/portraits/men/36.jpg>",
+    "imageUrl": "https://randomuser.me/api/portraits/men/36.jpg",
     "isOnline": false,
     "message": "No, I won't go!",
     "time": "28th Jan"
