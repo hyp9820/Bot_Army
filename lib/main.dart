@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'Conversations.dart';
+=======
+import './Conversations.dart';
+>>>>>>> d665b144c0cc5839f5b32d76f97c516485ae4d54
 
 void main() {
   runApp(MyApp());
