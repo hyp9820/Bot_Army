@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'conversation.dart';
+import './Conversations.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: conversation(),
+      home: Conversations(),
     );
   }
 }
