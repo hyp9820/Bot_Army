@@ -10,11 +10,9 @@ TextEditingController _searchController = new TextEditingController();
 
 class _ConversationsState extends State<Conversations> {
   @override
+
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text("Chat"),
-      // ),
       body: SafeArea(
         child: Container(
           padding: EdgeInsets.only(left: 20, right: 20, top: 15),
@@ -30,7 +28,7 @@ class _ConversationsState extends State<Conversations> {
                       shape: BoxShape.circle,
                       image: DecorationImage(
                         image: NetworkImage(
-                        "<https://randomuser.me/api/portraits/men/11.jpg>"),
+                        "https://randomuser.me/api/portraits/men/11.jpg"),
                           fit: BoxFit.cover)),
                       ),
                     Text(
@@ -61,17 +59,19 @@ class _ConversationsState extends State<Conversations> {
                     border: InputBorder.none),
               ),
             ),
-
-
+            SizedBox(
+              height: 20,
+            ),
+            _conversations(context)
             ],
           ),
         ),
       ),
     );
   }
-}
 
-_conversations(BuildContext context) {
+
+  _conversations(BuildContext context) {
     return Column(
       children: List.generate(conversationList.length, (index) {
         return InkWell(
@@ -165,4 +165,9 @@ _conversations(BuildContext context) {
       }),
     );
   }
+
+
+
+
+}
 
