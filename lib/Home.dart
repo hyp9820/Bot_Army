@@ -91,7 +91,7 @@ class _HomeState extends State<Home> {
                     children: <Widget>[
                       Text(
                         'Welcome!!!',
-                        style: GoogleFonts.inter(
+                        style: GoogleFonts.averiaSansLibre(
                           fontSize: 18,
                           fontWeight: FontWeight.w500,
                           color: Colors.black87,
@@ -99,7 +99,7 @@ class _HomeState extends State<Home> {
                       ),
                       Text(
                         'Damon Salvatore',
-                        style: GoogleFonts.inter(
+                        style: GoogleFonts.averiaSansLibre(
                           fontSize: 30,
                           fontWeight: FontWeight.w500,
                           color: Colors.black87,
@@ -117,13 +117,117 @@ class _HomeState extends State<Home> {
                 Padding(
                   padding: EdgeInsets.only(left: 16, right: 16, bottom: 13),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
-                      Text("Edkfdk"),
-                      Card(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text("Doctor"),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                        child: Card(
+                          child: InkWell(
+                            onTap: () {
+                              print('Card tapped.');
+                            },
+                            child: Container(
+                              height: 100,
+                              width: 100,
+                              child: Center(
+                                child: Text(
+                                  "Doctor",
+                                  textAlign: TextAlign.center,
+                                  style: GoogleFonts.averiaSansLibre(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black87,
+                                  ),
+                                ),
+                              ),
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  gradient: LinearGradient(
+                                      begin: Alignment.topRight,
+                                      end: Alignment.bottomLeft,
+                                      colors: [
+                                        Colors.lightBlue.shade400,
+                                        // Colors.lightBlue.shade200
+                                        Theme.of(context).primaryColor
+                                      ])),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                        child: Card(
+                          child: InkWell(
+                            onTap: () {
+                              print('Card tapped.');
+                            },
+                            child: Container(
+                              height: 100,
+                              width: 100,
+                              child: Center(
+                                child: Text(
+                                  "Tests and Assesment",
+                                  textAlign: TextAlign.center,
+                                  style: GoogleFonts.averiaSansLibre(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black87,
+                                  ),
+                                ),
+                              ),
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  gradient: LinearGradient(
+                                      begin: Alignment.topRight,
+                                      end: Alignment.bottomLeft,
+                                      colors: [
+                                        Colors.lightBlue.shade400,
+                                        // Colors.lightBlue.shade200
+                                        Theme.of(context).primaryColor
+                                      ])),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                        child: Card(
+                          child: InkWell(
+                            onTap: () {
+                              print('Card tapped.');
+                            },
+                            child: Container(
+                              height: 100,
+                              width: 100,
+                              child: Center(
+                                child: Text(
+                                  "Forums",
+                                  textAlign: TextAlign.center,
+                                  style: GoogleFonts.averiaSansLibre(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black87,
+                                  ),
+                                ),
+                              ),
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  gradient: LinearGradient(
+                                      begin: Alignment.topRight,
+                                      end: Alignment.bottomLeft,
+                                      colors: [
+                                        Colors.lightBlue.shade400,
+                                        // Colors.lightBlue.shade200
+                                        Theme.of(context).primaryColor
+                                      ])),
+                            ),
+                          ),
                         ),
                       ),
                     ],
