@@ -3,44 +3,57 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 final List<Map> articles = [
   {
-    "title": "How to Seem Like You Always Have Your Shot Together",
-    "author": "Jonhy Vino",
+    "title":
+        "It is no measure of health to be well adjusted to a profoundly sick society.",
+    "author": "Jiddu Krishnamurti",
     "time": "4 min read",
+    "image_url": "assets/images/forum1.jpg",
   },
   {
-    "title": "Does Dry is January Actually Improve Your Health?",
-    "author": "Jonhy Vino",
+    "title":
+        "When wealth is lost, nothing is lost; when health is lost, something is lost; when character is lost, all is lost.",
+    "author": "Billy Graham",
     "time": "4 min read",
+    "image_url": "assets/images/forum2.jpg",
   },
   {
-    "title": "You do hire a designer to make something. You hire them.",
-    "author": "Jonhy Vino",
+    "title":
+        "Good health is not something we can buy. However, it can be an extremely valuable savings account.",
+    "author": "Anne Wilson Schaef",
     "time": "4 min read",
+    "image_url": "assets/images/forum3.jpg",
   },
   {
-    "title": "How to Seem Like You Always Have Your Shot Together",
-    "author": "Jonhy Vino",
+    "title":
+        "There's nothing more important than our good health - that's our principal capital asset.",
+    "author": "Arlen Specter",
     "time": "4 min read",
+    "image_url": "assets/images/forum4.jpg",
   },
   {
-    "title": "How to Seem Like You Always Have Your Shot Together",
-    "author": "Jonhy Vino",
+    "title": "Your body hears everything your mind says.",
+    "author": "Naomi Judd",
     "time": "4 min read",
+    "image_url": "assets/images/forum5.jpg",
   },
   {
-    "title": "Does Dry is January Actually Improve Your Health?",
-    "author": "Jonhy Vino",
+    "title": "A healthy outside starts from the inside.",
+    "author": "Robert Urich",
     "time": "4 min read",
+    "image_url": "assets/images/forum6.jpg",
   },
   {
-    "title": "You do hire a designer to make something. You hire them.",
-    "author": "Jonhy Vino",
+    "title":
+        "Sleep is that golden chain that ties health and our bodies together.",
+    "author": "Thomas Dekker",
     "time": "4 min read",
+    "image_url": "assets/images/forum7.jpg",
   },
   {
-    "title": "How to Seem Like You Always Have Your Shot Together",
-    "author": "Jonhy Vino",
+    "title": "Health is not valued till sickness comes.",
+    "author": "Thomas Fuller",
     "time": "4 min read",
+    "image_url": "assets/images/forum8.jpg",
   },
 ];
 
@@ -77,8 +90,8 @@ class BlogHomeOnePage extends StatelessWidget {
           backgroundColor: Theme.of(context).buttonColor,
           appBar: AppBar(
             centerTitle: true,
-            title: Text('Categories'),
-            leading: Icon(Icons.category),
+            title: Text('Forums'),
+            leading: Icon(Icons.menu),
             actions: <Widget>[
               IconButton(
                 icon: Icon(Icons.search),
@@ -120,7 +133,7 @@ class BlogHomeOnePage extends StatelessWidget {
 
   Widget _buildArticleItem(int index) {
     Map article = articles[index];
-    final String sample = "assets/images/test.jpg";
+    // final String sample = "assets/images/test.jpg";
     return Container(
       color: Colors.white,
       child: Stack(
@@ -141,7 +154,7 @@ class BlogHomeOnePage extends StatelessWidget {
                   color: Colors.blue,
                   width: 80.0,
                   child: Image.asset(
-                    sample,
+                    article["image_url"],
                     fit: BoxFit.cover,
                   ),
                 ),
