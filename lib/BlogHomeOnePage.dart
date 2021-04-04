@@ -90,7 +90,7 @@ class BlogHomeOnePage extends StatelessWidget {
           backgroundColor: Theme.of(context).buttonColor,
           appBar: AppBar(
             centerTitle: true,
-            title: Text('Forums'),
+            title: Text('Quotes'),
             leading: Icon(Icons.menu),
             actions: <Widget>[
               IconButton(

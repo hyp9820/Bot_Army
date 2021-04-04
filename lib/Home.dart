@@ -213,7 +213,7 @@ class _HomeState extends State<Home> {
                               width: 100,
                               child: Center(
                                 child: Text(
-                                  "Forums",
+                                  "Quotes",
                                   textAlign: TextAlign.center,
                                   style: GoogleFonts.averiaSansLibre(
                                     fontSize: 18,
