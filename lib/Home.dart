@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:psycare/BlogHomeOnePage.dart';
 import 'dart:ui';
+
+import 'package:psycare/HomeDoc.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -132,7 +135,11 @@ class _HomeState extends State<Home> {
                         child: Card(
                           child: InkWell(
                             onTap: () {
-                              print('Card tapped.');
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => HomeDoc()),
+                              );
                             },
                             child: Container(
                               height: 100,
@@ -206,7 +213,11 @@ class _HomeState extends State<Home> {
                         child: Card(
                           child: InkWell(
                             onTap: () {
-                              print('Card tapped.');
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => BlogHomeOnePage()),
+                              );
                             },
                             child: Container(
                               height: 100,
