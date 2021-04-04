@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import './Home.dart';
 import './BlogHomeOnePage.dart';
+import 'package:psycare/HomeDoc.dart';
+import './Conversations.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Color(0xff7e66d4),
       ),
       // home: MyHomePage(title: 'Flutter Demo Home Page'),
-      home: BlogHomeOnePage(),
+      home: Home(),
       debugShowCheckedModeBanner: false,
     );
   }
