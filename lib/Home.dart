@@ -4,7 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:psycare/BlogHomeOnePage.dart';
 import 'dart:ui';
-import 'Quiz.dart';
+import './quiz.dart';
 import 'package:psycare/HomeDoc.dart';
 
 class Home extends StatefulWidget {
@@ -176,8 +176,10 @@ class _HomeState extends State<Home> {
                         child: Card(
                           child: InkWell(
                             onTap: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) => QuizApp()));
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => QuizApp()));
                             },
                             child: Container(
                               height: 100,
