@@ -42,20 +42,24 @@ class Result extends StatelessWidget {
             style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
           ), //Text
-          FlatButton(
+          TextButton(
             child: Text(
               'Restart Quiz!',
-            ), //Text
-            textColor: Colors.blue,
+            ),
+            style: ButtonStyle(
+              foregroundColor: MaterialStateProperty.all(Colors.blue),
+            ),
             onPressed: resetHandler,
           ),
-          FlatButton(
+          TextButton(
             child: Text(
               'Head Back home',
             ), //Text
-            textColor: Colors.blue,
-            onPressed: resetHandler ,
-          ),//FlatButton
+            style: ButtonStyle(
+              foregroundColor: MaterialStateProperty.all(Colors.blue),
+            ),
+            onPressed: resetHandler,
+          ), //FlatButton
         ], //<Widget>[]
       ), //Column
     ); //Center

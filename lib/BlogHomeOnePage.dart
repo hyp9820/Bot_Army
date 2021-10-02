@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 final List<Map> articles = [
   {
@@ -74,7 +73,7 @@ class BlogHomeOnePage extends StatelessWidget {
           appBarTheme: AppBarTheme(
             color: Colors.white,
             textTheme: TextTheme(
-              title: TextStyle(
+              caption: TextStyle(
                 color: secondaryColor,
                 fontSize: 20.0,
                 fontWeight: FontWeight.bold,
