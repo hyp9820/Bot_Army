@@ -60,7 +60,7 @@ class ArticleOnePage extends StatelessWidget {
                   ),
                   Text(
                     "Lorem ipsum dolor sit amet",
-                    style: Theme.of(context).textTheme.title,
+                    style: Theme.of(context).textTheme.caption,
                   ),
                   Divider(),
                   SizedBox(

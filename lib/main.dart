@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import './Home.dart';
 import 'package:flutter/services.dart';
-import './BlogHomeOnePage.dart';
-import 'package:psycare/HomeDoc.dart';
-import './Conversations.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
-  SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom]);
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
+      overlays: [SystemUiOverlay.bottom]);
   runApp(MyApp());
 }
 
